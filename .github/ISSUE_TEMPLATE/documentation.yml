@@ -1,0 +1,56 @@
+name: Documentation Issue
+description: Report missing, unclear, or incorrect documentation.
+title: "[Docs]: "
+labels:
+  - "type: documentation"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation Protocol
+        Help us improve our documentation. Please point us exactly to the missing or confusing parts.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please check all boxes before submitting.
+      options:
+        - label: I have searched the existing issues and this is not a duplicate.
+          required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: URL or File Path
+      description: Where is the documentation issue located?
+      placeholder: e.g., https://docs.example.com/... or /docs/setup.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: What is wrong, unclear, or missing?
+      description: Provide a clear explanation of the documentation problem.
+      placeholder: The section about X is missing details on Y...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Fix (Optional)
+      description: If you know what the documentation should say, please propose it here.
+      placeholder: I suggest rewriting the paragraph to state...
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any other context, screenshots, or links that might be helpful.
+      placeholder: Add any other relevant context here...
+    validations:
+      required: false

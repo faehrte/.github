@@ -1,0 +1,94 @@
+name: Bug Report
+description: Report a software bug to help us improve.
+title: "[Bug]: "
+labels:
+  - "type: bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Reporting Protocol
+        Please provide as much information as possible so we can squash this bug efficiently.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please check all boxes before submitting.
+      options:
+        - label: I have searched the existing issues and this is not a duplicate.
+          required: true
+        - label: I am running the latest version of the software.
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Tell us what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to trigger the bug in the current (broken) version.
+      placeholder: |
+        1. Open '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected vs. Actual Behavior
+      description: What should have happened and what happened instead?
+      placeholder: |
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / Commit Hash
+      description: Which version of the software are you using?
+      placeholder: e.g., v1.2.3 or 8a3f9c2
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide details about your system setup. You can also paste the output of environment scripts here.
+      placeholder: |
+        - OS: macOS 14.2
+        - Browser: Chrome 121 (if applicable)
+        - Runtime/Node.js: v20.10.0 (if applicable)
+        - Framework/Package Version: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs & Screenshots
+      description: Paste any relevant logs or drag and drop screenshots here.
+      render: shell
+      placeholder: Paste your stacktrace or logs here...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context, workarounds, or links about the bug here.
+      placeholder: Additional details...
+    validations:
+      required: false
