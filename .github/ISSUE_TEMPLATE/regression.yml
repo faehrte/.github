@@ -2,7 +2,7 @@ name: Regression Report
 description: Report a bug that used to work in a previous version but is now broken.
 title: "[Regression]: "
 labels:
-  - "type: bug"
+  - "type/bug"
 body:
   - type: markdown
     attributes:

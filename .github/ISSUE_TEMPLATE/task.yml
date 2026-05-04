@@ -2,7 +2,7 @@ name: Task / Maintenance
 description: Internal tasks, refactoring, or maintenance work.
 title: "[Task]: "
 labels:
-  - "type: maintenance"
+  - "type/maintenance"
 body:
   - type: markdown
     attributes:
